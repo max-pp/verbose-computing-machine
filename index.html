@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barber Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            background: url('https://images.unsplash.com/photo-1612423285017-28f3f74ef7ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8YmFyYmVyc2hvcHxlbnwwfHx8fDE2OTY1NzA2NzM&ixlib=rb-4.0.3&q=80&w=1200') center/cover no-repeat;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 2px 2px 5px #000;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        nav {
+            background: #222;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+        .services, .team {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .service, .member {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1 1 250px;
+            text-align: center;
+        }
+        .service h3, .member h3 {
+            margin-top: 10px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 0 auto;
+            gap: 15px;
+        }
+        input, select, button {
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background: #222;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #444;
+        }
+        .contact {
+            text-align: center;
+        }
+        iframe {
+            margin-top: 20px;
+            width: 100%;
+            height: 300px;
+            border: 0;
+            border-radius: 10px;
+        }
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#home">Головна</a>
+        <a href="#services">Послуги</a>
+        <a href="#team">Майстри</a>
+        <a href="#booking">Запис</a>
+        <a href="#contact">Контакти</a>
+    </nav>
+
+    <header id="home">
+        <h1>Barber Shop</h1>
+        <p>Стильні стрижки та догляд для чоловіків</p>
+    </header>
+
+    <section id="services">
+        <h2>Наші послуги та ціни</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Чоловіча стрижка</h3>
+                <p>300 грн</p>
+            </div>
+            <div class="service">
+                <h3>Бритье</h3>
+                <p>150 грн</p>
+            </div>
+            <div class="service">
+                <h3>Стрижка бороди</h3>
+                <p>200 грн</p>
+            </div>
+            <div class="service">
+                <h3>Комплексний догляд</h3>
+                <p>400 грн</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="team">
+        <h2>Наші майстри</h2>
+        <div class="team">
+            <div class="member">
+                <img src="https://images.unsplash.com/photo-1603415526960-fba7d0b46e70?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=200" alt="Майстер 1" style="border-radius:50%; width:150px;">
+                <h3>Олександр</h3>
+                <p>Головний барбер</p>
+            </div>
+            <div class="member">
+                <img src="https://images.unsplash.com/photo-1625572977285-2d95c3d6fcee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=200" alt="Майстер 2" style="border-radius:50%; width:150px;">
+                <h3>Іван</h3>
+                <p>Майстер стрижок</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking">
+        <h2>Онлайн-запис</h2>
+        <form>
+            <input type="text" placeholder="Ваше ім’я" required>
+            <input type="tel" placeholder="Телефон" required>
+            <input type="date" required>
+            <input type="time" required>
+            <button type="submit">Записатись</button>
+        </form>
+    </section>
+
+    <section id="contact">
+        <h2>Контакти</h2>
+        <div class="contact">
+            <p>Адреса: м. Київ, вул. Прикладна, 10</p>
+            <p>Телефон: +380 50 123 45 67</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.193451903434!2d30.515000315707914!3d50.4501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce58f5e7c889%3A0xe3a3c3f927d3f1b6!2z0JrQuNGH0LrQvtCz0L7Qu9Cw0YHQutCw0Y8g0JzQvtGB0YHQuNGH0LAsIDEwLCDQkNCw0YDRgdC40LvRjNC60LAg0JrQuNC70L7QuSDQodCw0YDRgdC60L7QstCw!5e0!3m2!1suk!2sua!4v1696571440000!5m2!1suk!2sua" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 Barber Shop. Всі права захищені.
+    </footer>
+
+</body>
+</html>

@@ -18,67 +18,71 @@
     </nav>
 
     <header id="home">
-        <h1>Barber Shop</h1>
-        <p>Стильні стрижки та догляд для чоловіків</p>
+        <div class="overlay">
+            <h1>Barber Shop</h1>
+            <p>Стильні стрижки та догляд для чоловіків</p>
+        </div>
     </header>
 
-    <section id="services">
-        <h2>Наші послуги та ціни</h2>
-        <div class="services">
-            <div class="service">
-                <h3>Чоловіча стрижка</h3>
-                <p>300 грн</p>
+    <main>
+        <section id="services">
+            <h2>Наші послуги та ціни</h2>
+            <div class="services">
+                <div class="service">
+                    <h3>Чоловіча стрижка</h3>
+                    <p>300 грн</p>
+                </div>
+                <div class="service">
+                    <h3>Бритье</h3>
+                    <p>150 грн</p>
+                </div>
+                <div class="service">
+                    <h3>Стрижка бороди</h3>
+                    <p>200 грн</p>
+                </div>
+                <div class="service">
+                    <h3>Комплексний догляд</h3>
+                    <p>400 грн</p>
+                </div>
             </div>
-            <div class="service">
-                <h3>Бритье</h3>
-                <p>150 грн</p>
-            </div>
-            <div class="service">
-                <h3>Стрижка бороди</h3>
-                <p>200 грн</p>
-            </div>
-            <div class="service">
-                <h3>Комплексний догляд</h3>
-                <p>400 грн</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="team">
-        <h2>Наші майстри</h2>
-        <div class="team">
-            <div class="member">
-                <img src="https://images.unsplash.com/photo-1603415526960-fba7d0b46e70?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=200" alt="Майстер 1">
-                <h3>Олександр</h3>
-                <p>Головний барбер</p>
+        <section id="team">
+            <h2>Наші майстри</h2>
+            <div class="team">
+                <div class="member">
+                    <img src="https://images.unsplash.com/photo-1603415526960-fba7d0b46e70?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=200" alt="Майстер 1">
+                    <h3>Олександр</h3>
+                    <p>Головний барбер</p>
+                </div>
+                <div class="member">
+                    <img src="https://images.unsplash.com/photo-1625572977285-2d95c3d6fcee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=200" alt="Майстер 2">
+                    <h3>Іван</h3>
+                    <p>Майстер стрижок</p>
+                </div>
             </div>
-            <div class="member">
-                <img src="https://images.unsplash.com/photo-1625572977285-2d95c3d6fcee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=200" alt="Майстер 2">
-                <h3>Іван</h3>
-                <p>Майстер стрижок</p>
+        </section>
+
+        <section id="booking">
+            <h2>Онлайн-запис</h2>
+            <form>
+                <input type="text" placeholder="Ваше ім’я" required>
+                <input type="tel" placeholder="Телефон" required>
+                <input type="date" required>
+                <input type="time" required>
+                <button type="submit">Записатись</button>
+            </form>
+        </section>
+
+        <section id="contact">
+            <h2>Контакти</h2>
+            <div class="contact">
+                <p>Адреса: м. Київ, вул. Прикладна, 10</p>
+                <p>Телефон: +380 50 123 45 67</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.193451903434!2d30.515000315707914!3d50.4501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce58f5e7c889%3A0xe3a3c3f927d3f1b6!2z0JrQuNGH0LrQvtCz0L7Qu9Cw0YHQutCw0Y8g0JzQvtGB0YHQuNGH0LAsIDEwLCDQkNCw0YDRgdC40LvRjNC60LAg0JrQuNC70L7QuSDQodCw0YDRgdC60L7QstCw!5e0!3m2!1suk!2sua!4v1696571440000!5m2!1suk!2sua" allowfullscreen></iframe>
             </div>
-        </div>
-    </section>
-
-    <section id="booking">
-        <h2>Онлайн-запис</h2>
-        <form>
-            <input type="text" placeholder="Ваше ім’я" required>
-            <input type="tel" placeholder="Телефон" required>
-            <input type="date" required>
-            <input type="time" required>
-            <button type="submit">Записатись</button>
-        </form>
-    </section>
-
-    <section id="contact">
-        <h2>Контакти</h2>
-        <div class="contact">
-            <p>Адреса: м. Київ, вул. Прикладна, 10</p>
-            <p>Телефон: +380 50 123 45 67</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.193451903434!2d30.515000315707914!3d50.4501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce58f5e7c889%3A0xe3a3c3f927d3f1b6!2z0JrQuNGH0LrQvtCz0L7Qu9Cw0YHQutCw0Y8g0JzQvtGB0YHQuNGH0LAsIDEwLCDQkNCw0YDRgdC40LvRjNC60LAg0JrQuNC70L7QuSDQodCw0YDRgdC60L7QstCw!5e0!3m2!1suk!2sua!4v1696571440000!5m2!1suk!2sua" allowfullscreen></iframe>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         &copy; 2025 Barber Shop. Всі права захищені.

@@ -1,0 +1,138 @@
+/* Основні налаштування */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Навігація */
+nav {
+    background: #222;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Хедер */
+header {
+    background: url('https://images.unsplash.com/photo-1612423285017-28f3f74ef7ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600') center/cover no-repeat fixed;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+header .overlay {
+    background: rgba(0,0,0,0.5);
+    padding: 40px;
+    border-radius: 10px;
+}
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #fff;
+    text-shadow: 2px 2px 5px #000;
+}
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #fff;
+}
+
+/* Основний контент */
+main {
+    background: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+/* Секції */
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+/* Послуги та майстри */
+.services, .team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.service, .member {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 250px;
+    text-align: center;
+}
+.service h3, .member h3 {
+    margin-top: 10px;
+}
+.member img {
+    border-radius: 50%;
+    width: 150px;
+}
+
+/* Форма запису */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 15px;
+}
+input, select, button {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+button {
+    background: #222;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+button:hover {
+    background: #444;
+}
+
+/* Контакти та карта */
+.contact {
+    text-align: center;
+}
+iframe {
+    margin-top: 20px;
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* Футер */
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}

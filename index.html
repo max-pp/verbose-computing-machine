@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
+<<<<<<< HEAD
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barber Shop</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+=======
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>King Barbershop</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="script.js" defer></script>
+>>>>>>> 7c02674 (...)
 </head>
-<body>
+<body class="bg-gray-900 text-white font-sans">
+  <!-- Навігація -->
+<header class="fixed top-0 left-0 w-full bg-gray-800 bg-opacity-80 p-4 flex justify-between items-center z-20">
+  <div class="logo text-2xl font-bold">KING <span class="text-yellow-600">BARBERSHOP</span></div>
+  <nav class="flex-1">
+    <ul class="flex space-x-6 justify-center menu">
+      <li><a href="#home" class="hover:text-yellow-600">Головна</a></li>
+      <li><a href="#services" class="hover:text-yellow-600">Послуги</a></li>
+      <li><a href="#team" class="hover:text-yellow-600">Майстри</a></li>
+      <li><a href="#booking" class="hover:text-yellow-600">Запис</a></li>
+      <li><a href="#contact" class="hover:text-yellow-600">Контакти</a></li>
+    </ul>
+  </nav>
+  <a href="tel:+380994048392" class="phone bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700 md:block hidden">+380 (99) 404 83 92</a>
+  <button id="menu-toggle" class="hamburger md:hidden text-white p-2 focus:outline-none z-30">
+    <span class="hamburger-icon"></span>
+    <span class="hamburger-icon"></span>
+    <span class="hamburger-icon"></span>
+  </button>
+</header>
 
+<<<<<<< HEAD
     <nav>
         <a href="#home">Головна</a>
         <a href="#services">Послуги</a>
@@ -83,10 +112,121 @@
             </div>
         </section>
     </main>
+=======
+  <!-- Герой блок з фіксованою картинкою -->
+  <section id="home" class="hero min-h-screen relative">
+    <div class="fixed inset-0 z-0">
+      <img src="images/image.png" alt="King Barbershop" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <div class="text-center z-10">
+          <h1 class="text-5xl font-bold mb-4">KING BARBERSHOP</h1>
+          <p class="text-xl mb-6">Відчуй себе королем</p>
+          <a href="#booking" class="bg-yellow-600 text-white px-6 py-3 rounded-lg hover:bg-yellow-700">Онлайн-запис</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        &copy; 2025 Barber Shop. Всі права захищені.
-    </footer>
+  <!-- Бежевий блок з усіма секціями -->
+  <div class="bg-beige-200 text-gray-900 py-16 px-4" style="background-color: #f5f5dc;">
+    <!-- Послуги -->
+    <section id="services" class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-10">Послуги і ціни</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+          <h3 class="text-xl mb-2">Стрижка</h3>
+          <p class="text-yellow-600 font-bold">300 грн</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+          <h3 class="text-xl mb-2">Бриття</h3>
+          <p class="text-yellow-600 font-bold">150 грн</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+          <h3 class="text-xl mb-2">Стрижка бороди</h3>
+          <p class="text-yellow-600 font-bold">200 грн</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+          <h3 class="text-xl mb-2">Комплекс</h3>
+          <p class="text-yellow-600 font-bold">400 грн</p>
+        </div>
+      </div>
+    </section>
+>>>>>>> 7c02674 (...)
 
+    <!-- Про нас (галерея) -->
+    <section id="about" class="max-w-5xl mx-auto mt-16">
+      <h2 class="text-3xl font-bold text-center mb-10">Про нас</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <img src="images/image.png" alt="Галерея 1" class="rounded-lg">
+        <img src="images/image.png" alt="Галерея 2" class="rounded-lg">
+        <img src="images/image.png" alt="Галерея 3" class="rounded-lg">
+        <img src="images/image.png" alt="Галерея 4" class="rounded-lg">
+        <img src="images/image.png" alt="Галерея 5" class="rounded-lg">
+        <img src="images/image.png" alt="Галерея 6" class="rounded-lg">
+        <img src="images/image.png" alt="Галерея 7" class="rounded-lg">
+        <img src="images/image.png" alt="Галерея 8" class="rounded-lg">
+      </div>
+    </section>
+
+    <!-- Наші майстри -->
+    <section id="team" class="max-w-5xl mx-auto mt-16">
+      <h2 class="text-3xl font-bold text-center mb-10">Наші майстри</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="text-center">
+          <img src="images/image.png" alt="Майстер 1" class="rounded-lg mx-auto">
+          <h3 class="text-xl mt-2">Іван</h3>
+          <p class="text-gray-400">10 років досвіду</p>
+        </div>
+        <div class="text-center">
+          <img src="images/image.png" alt="Майстер 2" class="rounded-lg mx-auto">
+          <h3 class="text-xl mt-2">Олег</h3>
+          <p class="text-gray-400">8 років досвіду</p>
+        </div>
+        <div class="text-center">
+          <img src="images/image.png" alt="Майстер 3" class="rounded-lg mx-auto">
+          <h3 class="text-xl mt-2">Дмитро</h3>
+          <p class="text-gray-400">6 років досвіду</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Онлайн-запис -->
+    <section id="booking" class="max-w-5xl mx-auto mt-16">
+      <h2 class="text-3xl font-bold text-center mb-10">Онлайн-запис</h2>
+      <form class="bg-gray-800 p-6 rounded-lg shadow-lg max-w-lg mx-auto">
+        <div class="mb-4">
+          <label class="block mb-2" for="name">Ім'я</label>
+          <input type="text" id="name" class="w-full p-2 rounded bg-gray-700" required>
+        </div>
+        <div class="mb-4">
+          <label class="block mb-2" for="phone">Телефон</label>
+          <input type="tel" id="phone" class="w-full p-2 rounded bg-gray-700" required>
+        </div>
+        <div class="mb-4">
+          <label class="block mb-2" for="date">Дата</label>
+          <input type="date" id="date" class="w-full p-2 rounded bg-gray-700" required>
+        </div>
+        <div class="mb-4">
+          <label class="block mb-2" for="time">Час</label>
+          <input type="time" id="time" class="w-full p-2 rounded bg-gray-700" required>
+        </div>
+        <button type="submit" class="w-full bg-yellow-600 text-white p-2 rounded hover:bg-yellow-700">Записатися</button>
+      </form>
+    </section>
+
+    <!-- Контакти -->
+    <section id="contact" class="max-w-5xl mx-auto mt-16">
+      <h2 class="text-3xl font-bold text-center mb-10">Контакти</h2>
+      <p class="text-center mb-4">м. Київ, вул. Кафедральна, 52а, секція 1</p>
+      <p class="text-center mb-4">Телефон: +380 (99) 404 83 92</p>
+      <div class="text-center">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.1234567890123!2d30.5234!3d50.4501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf0a12345678%3A0x9c2acabcd123456!2zS2lldiwgVWtyYWluZQ!5e0!3m2!1sen!2sus!4v1693312345!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </div>
+
+  <footer class="bg-gray-900 text-center p-4 text-gray-400 z-10 relative">
+    &copy; 2025 King Barbershop. Всі права захищені.
+  </footer>
 </body>
 </html>

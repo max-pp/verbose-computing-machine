@@ -1,138 +1,219 @@
-/* Основні налаштування */
+/* Загальні стилі */
 body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: #333;
+  margin: 0;
+  padding-top: 60px; /* Для уникнення перекриття контентом під фіксованою навігацією */
+  font-family: Arial, sans-serif;
+  color: #eee;
 }
 
-/* Навігація */
-nav {
-    background: #222;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
+/*burger menu*/
 
-/* Хедер */
-header {
-    background: url('https://images.unsplash.com/photo-1612423285017-28f3f74ef7ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600') center/cover no-repeat fixed;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.hamburger {
+  display: none;
+}
+.hamburger-icon {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: all 0.3s;
+}
+#menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 30;
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.phone {
+  display: block;
+}
+@media (max-width: 1024px) { /* Зміна з 768px на 1024px */
+  .hamburger {
+    display: block;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #222;
+    padding: 20px 0;
     text-align: center;
-}
-header .overlay {
-    background: rgba(0,0,0,0.5);
-    padding: 40px;
-    border-radius: 10px;
-}
-header h1 {
-    font-size: 3rem;
-    margin: 0;
-    color: #fff;
-    text-shadow: 2px 2px 5px #000;
-}
-header p {
-    font-size: 1.2rem;
-    margin-top: 10px;
-    color: #fff;
+  }
+  nav ul.menu {
+    display: none; /* Початково приховане */
+  }
+  nav ul.active {
+    display: flex;
+  }
+  .phone {
+    display: none; /* Приховуємо номер на малих екранах */
+  }
+  .navbar {
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav {
+    width: 100%;
+  }
 }
 
-/* Основний контент */
-main {
-    background: #fff;
-    position: relative;
-    z-index: 1;
+/* Герой з фіксованою картинкою */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.hero .fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+}
+.hero img {
+  object-fit: cover;
+}
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.hero h1 {
+  font-size: 4rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+.hero p {
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+/* Бежевий блок */
+.bg-beige-200 {
+  position: relative;
+  z-index: 10; /* Переконаємося, що блок поверх фіксованої картинки */
+  background-color: #f5f5dc; /* Гарантуємо бежевий фон */
+  padding-top: 20px; /* Додаємо мінімальний padding для видимості */
+  min-height: 100vh; /* Забезпечуємо мінімальну висоту */
+}
+.bg-beige-200 section {
+  padding: 40px 20px;
+}
+
+/* Галерея */
+#about img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 /* Секції */
 section {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+  position: relative;
+  z-index: 10;
+  margin: auto;
 }
 h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2rem;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-/* Послуги та майстри */
-.services, .team {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-.service, .member {
-    background: #f4f4f4;
-    padding: 20px;
-    border-radius: 10px;
-    flex: 1 1 250px;
-    text-align: center;
-}
-.service h3, .member h3 {
-    margin-top: 10px;
-}
-.member img {
-    border-radius: 50%;
-    width: 150px;
-}
-
-/* Форма запису */
+/* Форма */
 form {
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+form input {
+  border: none;
+  outline: none;
+}
+form button {
+  transition: background-color 0.3s;
+}
+
+/* Адаптивність */
+
+/* Загальні налаштування для мобільних пристроїв та планшетів */
+@media (max-width: 1024px) {
+  .navbar {
     flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto;
-    gap: 15px;
-}
-input, select, button {
     padding: 10px;
+    text-align: center;
+  }
+  .navbar nav {
+    margin-top: 10px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .navbar .logo {
+    font-size: 1.5rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
     font-size: 1rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-button {
-    background: #222;
-    color: #fff;
-    cursor: pointer;
-    border: none;
-    transition: 0.3s;
-}
-button:hover {
-    background: #444;
-}
+  }
 
-/* Контакти та карта */
-.contact {
-    text-align: center;
-}
-iframe {
-    margin-top: 20px;
+  /* Бежевий блок і секції */
+  .bg-beige-200 {
+    padding: 10px;
+  }
+  section {
+    padding: 20px 10px;
+  }
+  .max-w-5xl {
+    max-width: 100%;
     width: 100%;
-    height: 300px;
-    border: 0;
-    border-radius: 10px;
+    margin: 0;
+  }
+  .grid {
+    grid-template-columns: 1fr; /* Один стовпчик на мобільних та планшетах */
+    gap: 10px;
+  }
+  #services .grid,
+  #team .grid,
+  #about .grid {
+    grid-template-columns: 1fr; /* Забезпечуємо один стовпчик */
+  }
+  #about img {
+    width: 100%;
+    height: auto;
+  }
+  form {
+    width: 100%;
+    padding: 10px;
+  }
+  form input,
+  form button {
+    width: 100%;
+  }
+  #contact iframe {
+    width: 100%;
+    height: 200px; /* Зменшуємо висоту карти для мобільних */
+  }
 }
 
-/* Футер */
-footer {
-    background: #222;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
+/* Додаткове обмеження ширини для уникнення горизонтального скролу */
+body {
+  overflow-x: hidden; /* Блокуємо горизонтальний скрол */
 }
